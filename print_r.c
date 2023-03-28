@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  *print_r - prints a string in reverse
  *@list:list to increment
