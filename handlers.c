@@ -2,17 +2,15 @@
 
 /**
  *get_flags - acts responsively when a flag is invoked
- *@c:flag character
+ *@a:flag character
  *@f:struct flags pointer
  *Return:0 - flag invoked,1 otherwise
  */
-
-int get_flags(char c, han_s *f)
-
+int get_flags(char a, han_s *f)
 {
 	int i = 0;
 
-	switch (c)
+	switch (a)
 	{
 	case '+':
 		(*f).plus = 1;
@@ -37,23 +35,21 @@ int get_flags(char c, han_s *f)
 	}
 	return (i);
 }
-
 /**
  *get_modifier - finds the modifier and invokes corresponding func
- *@s:format string
+ *@b:format string
  *@handler:handler struct
  *Return:1 if modifier is valid
  */
-
-int get_modifier(char *s, han_s *handler)
-
+int get_modifier(char b, han_s *handler)
 {
 	int i = 0;
 
-	switch (s)
+	switch (b)
 	{
 	case 'h':
 		i = 1;
+
 		handler->h_mod = 1;
 		break;
 	case 'l':
@@ -63,32 +59,28 @@ int get_modifier(char *s, han_s *handler)
 	}
 	return (i);
 }
-
 /**
  *get_width - gets width from a width specifier
- *@s:format string
- *@handler:struct
+ *@i:format string
  *@list:list to increment
  *Return:string
  */
-
-char *get_width(char *s, han_s handler, va_list list)
+char *get_width(char *i, va_list list)
 
 {
 	int width = 0;
 
-	if (*s == '*')
+	if (*i == '*')
 	{
 		width = va_arg(list, int);
-		s++;
+		i++;
 	}
 	else
 	{
-		while (*s >= 0 && *s <= 9)
+		while (*i >= 0 && *i <= 9)
 		{
-			width = width * 10 + (*s++ - '0');
+			width = width * 10 + (*i++ - '0');
 		}
 	}
-	handler->width = width;
-	return (s);
+	return (i);
 }

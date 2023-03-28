@@ -2,12 +2,12 @@
 
 /**
  *print_char - prints a character to stdout
- *@list:list to increment
+ *@va_list:list to increment
  *@handlers:handler struct
  *Return:1 since printed only one character
  */
 
-int print_char(va_list list, handlers)
+int print_char(va_list list)
 
 {
 	int c;
@@ -17,7 +17,6 @@ int print_char(va_list list, handlers)
 
 	c = va_arg(list, int);
 
-	if (handlers->minus)
 	{
 		count += _putchar(c);
 	}
@@ -82,15 +81,13 @@ int print_nan(char ch1, char ch2)
  *Return:count of characters printed
  */
 
-int print_num(va_list list)
+int print_num(va_list list, hans_s handlers)
 
 {
 	long num;
 	unsigned int n;
 	int count = 0;
 	int x = 1;
-
-	if (handlers->l_mod)
 
 	{
 		num = va_arg(list, long);
