@@ -7,7 +7,7 @@
  *Return:1 since printed only one character
  */
 
-int print_char(va_list list, *handlers)
+int print_char(va_list list, han_s *handlers)
 
 {
 	char c;
@@ -78,6 +78,7 @@ int print_nan(char ch1, char ch2)
 /**
  *print_num - prints an integer of format 'd'
  *@list:list to increment
+ @handlers:handler struct
  *Return:count of characters printed
  */
 
