@@ -70,7 +70,7 @@ int print_octal(va_list list)
 	}
 	for (b = (a - 1); b >= 0; b--)
 	{
-		_putchar(str[b] + '0')
+		_putchar(str[b] + '0');
 	}
 	free(str);
 	return (len);
