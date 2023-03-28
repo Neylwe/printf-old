@@ -190,7 +190,7 @@ int print_S(va_list list)
 		{
 			putchar('\\');
 			_putchar('x');
-			len = base_len(s[i], 16);
+			len = base_len(s[a], 16);
 			if (len != 2)
 			{
 				_putchar('0');
