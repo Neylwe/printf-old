@@ -78,7 +78,6 @@ int print_nan(char ch1, char ch2)
 /**
  *print_num - prints an integer of format 'd'.
  *@list:list to increment.
- @handlers: handler struct.
  *Return:count of characters printed
  */
 
