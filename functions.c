@@ -7,7 +7,7 @@
  *Return:1 since printed only one character
  */
 
-int print_char(va_list list, handlers)
+int print_char(va_list list, *handlers)
 
 {
 	char c;
@@ -90,6 +90,7 @@ int print_num(va_list list)
 	int x = 1;
 
 	if (handlers->l_mod)
+		
 	{
 		num = va_arg(list, long);
 	}
