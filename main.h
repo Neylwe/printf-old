@@ -83,9 +83,6 @@ void _write(buffer *b_r, char c);
 void _write_str(buffer *b_r, char *s);
 void _write_tmpbuf(buffer *b_r);
 int print_r(va_list list);
-void simple_print_buffer(char *buffer, unsigned int size);
-char *_memset(char *s, char b, unsigned int n);
-void simple_print_buffer(char *buffer, unsigned int size);
 
 
 
