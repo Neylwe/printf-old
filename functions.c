@@ -7,16 +7,16 @@
  *Return:1 since printed only one character
  */
 
-int print_char(va_list list)
+int print_char(va_list list, handlers)
 
 {
-	char c;
+	int c;
 	char pad = ' ';
 	unsigned int pad_count = 1;
 	unsigned int count;
 
 	c = va_arg(list, int);
-	
+
 	if (handlers->minus)
 	{
 		count += _putchar(c);
