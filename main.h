@@ -76,7 +76,7 @@ int print_Hex(va_list list);
 int print_S(va_list list);
 int *rev_string(char *s);
 char *hex_conv(int num);
-int print_p(va_list list);
+int print_address(va_list list);
 int print_unsigned(va_list list);
 int print_rot13(va_list list);
 void _write(buffer *b_r, char c);
