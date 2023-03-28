@@ -15,7 +15,7 @@ int print_char(va_list list)
 	unsigned int pad_count = 1;
 	unsigned int count;
 
-	c = va_arg(list, char);
+	c = va_arg(list, int);
 	
 	if (handlers->minus)
 	{
