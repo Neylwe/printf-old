@@ -18,12 +18,10 @@ int print_char(va_list list)
 	c = va_arg(list, int);
 
 	{
-		count += _putchar(c);
+		count =+ _putchar(c);
 	}
-	for (; pad_count++ < handlers->width; )
-		count += _putchar(pad);
-	if (!handlers->minus)
-		count += _putchar(c);
+	for (; pad_count++ ;)	
+		count =+ _putchar(pad);
 	return (count);
 }
 
@@ -78,10 +76,11 @@ int print_nan(char ch1, char ch2)
 /**
  *print_num - prints an integer of format 'd'.
  *@list:list to increment.
- *Return:count of characters printed
+ *@handlers: struct
+ * Return:count of characters printed
  */
 
-int print_num(va_list list, hans_s handlers)
+	int print_num(va_list list)
 
 {
 	long num;
@@ -92,7 +91,7 @@ int print_num(va_list list, hans_s handlers)
 	{
 		num = va_arg(list, long);
 	}
-	else if (handlers->h_mod)
+	
 	{
 		num = (short int)va_arg(list, int);
 	}
@@ -102,7 +101,11 @@ int print_num(va_list list, hans_s handlers)
 		_putchar('-');
 		count++;
 	}
-	if (handlers->plus && num > 0)
+	
+	{
+		_putchar('+');
+	}
+	if (num > 0)
 	{
 		_putchar('+');
 	}
