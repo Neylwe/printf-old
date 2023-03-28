@@ -3,11 +3,11 @@
 /**
  *print_char - prints a character to stdout
  *@list:list to increment
- *@handler:handler struct
+ *@handlers:handler struct
  *Return:1 since printed only one character
  */
 
-int print_char(va_list list, handler)
+int print_char(va_list list, handlers)
 
 {
 	char c;
@@ -89,7 +89,7 @@ int print_num(va_list list)
 	int count = 0;
 	int x = 1;
 
-	if (handler->l_mod)
+	if (handlers->l_mod)
 	{
 		num = va_arg(list, long);
 	}
