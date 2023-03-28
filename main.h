@@ -83,6 +83,7 @@ void _write(buffer *b_r, char c);
 void _write_str(buffer *b_r, char *s);
 void _write_tmpbuf(buffer *b_r);
 int print_r(va_list list);
+int print_char(va_list list, han_s *handlers)
 
 
 
