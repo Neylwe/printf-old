@@ -7,7 +7,7 @@
  *Return:1 since printed only one character
  */
 
-int print_char(va_list list, han_s *handlers)
+int print_char(va_list list)
 
 {
 	char c;
@@ -16,6 +16,7 @@ int print_char(va_list list, han_s *handlers)
 	unsigned int count;
 
 	c = va_arg(list, char);
+	
 	if (handlers->minus)
 	{
 		count += _putchar(c);
