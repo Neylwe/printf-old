@@ -16,13 +16,13 @@ int print_char(va_list list, handlers)
 	unsigned int count;
 
 	c = va_arg(list, char);
-	if (handler->minus)
+	if (handlers->minus)
 	{
 		count += _putchar(c);
 	}
-	for (; pad_count++ < handler->width; )
+	for (; pad_count++ < handlers->width; )
 		count += _putchar(pad);
-	if (!handler->minus)
+	if (!handlers->minus)
 		count += _putchar(c);
 	return (count);
 }
@@ -93,7 +93,7 @@ int print_num(va_list list)
 	{
 		num = va_arg(list, long);
 	}
-	else if (handler->h_mod)
+	else if (handlers->h_mod)
 	{
 		num = (short int)va_arg(list, int);
 	}
@@ -103,7 +103,7 @@ int print_num(va_list list)
 		_putchar('-');
 		count++;
 	}
-	if (handler->plus && num > 0)
+	if (handlers->plus && num > 0)
 	{
 		_putchar('+');
 	}
